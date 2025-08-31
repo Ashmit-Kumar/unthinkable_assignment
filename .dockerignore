@@ -1,0 +1,52 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+.tox
+.coverage
+.cache
+*.cover
+*.log
+.mypy_cache
+.pytest_cache
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Documentation
+*.md
+docs/
+
+# Development files
+.env.example
+testing.html
+
+# Logs and temp
+logs/
+temp/
+tmp/
+
+# Docker files (exclude from build context)
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+
+# Kiro IDE
+.kiro/

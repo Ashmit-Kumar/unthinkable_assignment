@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  # Backend API
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: voice-shopping-backend
+    ports:
+      - "5000:5000"
+    environment:
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - ASSEMBLYAI_API_KEY=${ASSEMBLYAI_API_KEY}
+      - MONGO_URI=${MONGO_URI}
+    restart: unless-stopped
+
+  # Frontend
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: voice-shopping-frontend
+    ports:
+      - "3232:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
