@@ -6,9 +6,9 @@ A modern, responsive web application for voice-controlled shopping list manageme
 
 1. **Start the Backend Server**
    ```bash
-   # Make sure your FastAPI backend is running on http://127.0.0.1:8000
+   # Make sure your FastAPI backend is running on http://127.0.0.1:5000
    cd .. # Go to backend directory
-   uvicorn main:app --reload --host 127.0.0.1 --port 8000
+   uvicorn main:app --reload --host 127.0.0.1 --port 5000
    ```
 
 2. **Serve the Frontend**
@@ -91,7 +91,7 @@ frontend/
 ## 🔧 Configuration
 
 ### Backend URL
-The frontend is configured to connect to `http://127.0.0.1:8000` by default. To change this:
+The frontend is configured to connect to `http://127.0.0.1:5000` by default. To change this:
 
 1. Edit `js/app.js` line 4:
    ```javascript
@@ -140,7 +140,7 @@ window.voiceShoppingApp.username = 'your_username';
    - Try refreshing the page
 
 2. **"Backend connection failed"**
-   - Verify backend is running on port 8000
+   - Verify backend is running on port 5000
    - Check CORS settings in backend
    - Use the test page to diagnose
 

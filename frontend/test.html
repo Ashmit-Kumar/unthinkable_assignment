@@ -53,7 +53,7 @@
     
     <div class="test-section">
         <h2>Backend Connection Test</h2>
-        <p>Testing connection to: <code>http://127.0.0.1:8000</code></p>
+        <p>Testing connection to: <code>http://127.0.0.1:5000</code></p>
         <button class="test-button" onclick="testConnection()">Test Connection</button>
         <div id="connectionResult"></div>
     </div>
@@ -82,7 +82,7 @@
     <div class="status" id="overallStatus">Ready to test...</div>
 
     <script>
-        const API_BASE = 'http://127.0.0.1:8000';
+        const API_BASE = 'http://127.0.0.1:5000';
         const TEST_USERNAME = 'test_user';
         let isRecording = false;
         let mediaRecorder = null;
@@ -109,7 +109,7 @@
                 }
             } catch (error) {
                 showResult('connectionResult', `❌ Connection failed: ${error.message}`, true);
-                updateStatus('Cannot connect to backend - make sure it\'s running on port 8000');
+                updateStatus('Cannot connect to backend - make sure it\'s running on port 5000');
             }
         }
 

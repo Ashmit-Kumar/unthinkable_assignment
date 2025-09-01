@@ -80,7 +80,7 @@
 
     // 🔹 Function to fetch recommendations
     async function loadRecommendations() {
-      let res = await fetch(`http://127.0.0.1:8000/recommendations/${username}`);
+      let res = await fetch(`http://127.0.0.1:5000/recommendations/${username}`);
       let data = await res.json();
       recommendations.innerHTML = ""; 
       if (data.recommendations) {
@@ -138,7 +138,7 @@
         let formData = new FormData();
         formData.append("file", blob, "voice.webm");
 
-        let response = await fetch("http://127.0.0.1:8000/recognise_text_to_llm", {
+        let response = await fetch("http://127.0.0.1:5000/recognise_text_to_llm", {
           method: "POST",
           body: formData
         });
@@ -160,7 +160,7 @@
 
     // ✅ Confirm update
     confirmBtn.onclick = async () => {
-      let response = await fetch(`http://127.0.0.1:8000/update_wishlist/${username}`, {
+      let response = await fetch(`http://127.0.0.1:5000/update_wishlist/${username}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(lastLLMResponse)

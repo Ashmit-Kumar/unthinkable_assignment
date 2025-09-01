@@ -1,6 +1,6 @@
 // API Communication Module
 class APIClient {
-    constructor(baseURL = 'http://127.0.0.1:8000') {
+    constructor(baseURL = 'http://127.0.0.1:5000') {
         this.baseURL = baseURL;
         this.timeout = 30000; // 30 seconds
     }

@@ -28,7 +28,7 @@ try:
         print(f"🔗 Main App: http://localhost:{PORT}")
         print(f"🔗 Test Page: http://localhost:{PORT}/test.html")
         print()
-        print("📋 Make sure your backend is running on http://127.0.0.1:8000")
+        print("📋 Make sure your backend is running on http://127.0.0.1:5000")
         print("⏹️  Press Ctrl+C to stop the server")
         print()
         
